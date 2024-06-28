@@ -18,4 +18,4 @@ def analyze_sales_data(file_path):
 
 if __name__ == "__main__":
     file_path = 'sales_data.csv'  # Chemin vers le fichier CSV
-    analyze_sales_data(file_path).
+    analyze_sales_data(file_path)
