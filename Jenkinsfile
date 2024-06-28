@@ -5,7 +5,8 @@ pipeline {
             steps {
                 script {
                     // Manually add Python to the PATH
-                    env.PATH = "C:\\Program Files\\Python311\\python;C:\\Users\\fatma\\AppData\\Local\\Programs\\Python\\Python311\\Scripts;${env.PATH}"
+                    PATH=${env.PATH};${env.JAVA_HOME}\\bin;${env.PYTHON_HOME}
+                    //env.PATH = "C:\\Program Files\\Python311\\python;C:\\Users\\fatma\\AppData\\Local\\Programs\\Python\\Python311\\Scripts;${env.PATH}"
                 }
             }
         }
