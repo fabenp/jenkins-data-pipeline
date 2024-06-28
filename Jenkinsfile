@@ -1,15 +1,11 @@
 pipeline {
     agent any
+    environment{
+        JAVA_HOME = 'C:\\Program Files\\Java\\jdk1.8.0_202'
+        PYTHON_HOME = 'C:\\Users\\rehou\\AppData\\Local\\Programs\\Python\\Python39-32'
+        PATH = "${env.PATH};${env.JAVA_HOME}\\bin;${env.PYTHON_HOME}"}
     stages {
-        stage('Setup') {
-            steps {
-                script {
-                    // Manually add Python to the PATH
-                    PATH=${env.PATH};${env.JAVA_HOME};${env.PYTHON_HOME}
-                    //env.PATH = "C:\\Program Files\\Python311\\python;C:\\Users\\fatma\\AppData\\Local\\Programs\\Python\\Python311\\Scripts;${env.PATH}"
-                }
-            }
-        }
+        
         stage('Build') {
             steps {
                 script {
