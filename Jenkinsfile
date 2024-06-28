@@ -13,23 +13,12 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Create a virtual environment
-                    bat 'python -m venv venv'
-
-                    // Activate the virtual environment and install dependencies
-                    bat '''
-                    venv\\Scripts\\activate
-                    && pip install --upgrade pip
-                    && pip install pandas
-                    '''
-
-                    // Run the Python script
-                    bat '''
-                    venv\\Scripts\\activate
-                    && python data_analysis.py
-                    '''
-                }
+                    // Choisissez la commande en fonction de votre script
+                    bat'pip install pandas' // Installer les dépendances
+                    bat 'python data_analysis.py' // Exécuter le script Python
+                
             }
         }
     }
+}
 }
