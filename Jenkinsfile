@@ -6,7 +6,7 @@ pipeline {
                 script {
                     // Manually add Python to the PATH
                     // Replace 'C:\\Path\\To\\Python' with the actual installation path of Python on your system
-                    env.PATH = "C:\\Program Files\\Python311\\python;C:\\Program Files\\Python311\\python\\Scripts;${env.PATH}"
+                    env.PATH = "C:\\Program Files\\Python311\\python;C:\\Users\\fatma\\AppData\\Local\\Programs\\Python\\Python311\\Scripts;${env.PATH}"
                 }
             }
         }
