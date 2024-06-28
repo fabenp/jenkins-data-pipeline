@@ -4,9 +4,9 @@ pipeline {
         stage('Setup') {
             steps {
                 script {
-                    // Ensure Python is in the PATH
-                    def pythonHome = tool name: 'Python', type: 'Python'
-                    env.PATH = "${pythonHome}/Scripts:${pythonHome}:${env.PATH}"
+                    // Manually add Python to the PATH
+                    // Replace 'C:\\Path\\To\\Python' with the actual installation path of Python on your system
+                    env.PATH = "C:\Program Files\Python311\python;C:\Program Files\Python311\python\Scripts;${env.PATH}"
                 }
             }
         }
