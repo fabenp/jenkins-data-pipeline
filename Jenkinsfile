@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Ensure Python is in the PATH
-                    def pythonHome = tool name: 'Python', type: 'Python'
+                    def pythonHome = tool name: 'Python311', type: 'Python'
                     env.PATH = "${pythonHome}/Scripts:${pythonHome}:${env.PATH}"
                 }
             }
