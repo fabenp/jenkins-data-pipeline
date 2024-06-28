@@ -1,1 +1,1 @@
-Analyze sales data with Python
+Analyze sales data with Python.
